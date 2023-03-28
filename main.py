@@ -98,12 +98,13 @@ def generateView(args):
     tree.pack()
     win.mainloop()
 
-length = input("Podaj długość wektora, któreg dane będziesz wprowadzał: ")
+if __name__ == '__main__':
+    length = input("Podaj długość wektora, któreg dane będziesz wprowadzał: ")
 
-try:
-    tab = userInput(int(length))
-    # widok tabeli
-    if type(tab) == list:
-        generateView(tab)
-except:
-    print("Źle wprowadzone dane")
+    try:
+        tab = userInput(int(length))
+        # widok tabeli
+        if type(tab) == list:
+            generateView(tab)
+    except:
+        print("Źle wprowadzone dane")
